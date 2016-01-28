@@ -89,6 +89,7 @@ int card_factory::resort_cards(void)
 	}
 
 	return -1;
+	/////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
 
 vector<card> card_factory::cards = vector<card>();
