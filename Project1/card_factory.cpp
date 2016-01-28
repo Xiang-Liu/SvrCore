@@ -87,6 +87,8 @@ int card_factory::resort_cards(void)
 		memcpy_s(&(cards.at(index)), sizeof card, cardtmp, sizeof card);
 		
 	}
+
+	return -1;
 }
 
 vector<card> card_factory::cards = vector<card>();
