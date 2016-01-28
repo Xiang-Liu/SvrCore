@@ -73,14 +73,18 @@ unsigned long long get_cpu_cycle(void)
 int card_factory::resort_cards(void)
 {
 	card* cardtmp;
+	int index = 0;
 	srand((unsigned int)get_cpu_cycle);
 	rand();
 	vector<card>::iterator it = vector<card>::iterator();
 	for (it = cards.begin(); cards.end() != it; it++)
 	{
-		card
+		card* cardtmp = (card*)malloc(sizeof card);
+		memcpy_s(cardtmp,sizeof card,&(*it),sizeof card);
 		srand((unsigned int)get_cpu_cycle);
-		rand();
+		index = rand() / SPADE * NUMBER_2;
+		memcpy_s(&(*it), sizeof card, &(cards.at(index)),sizeof card);
+		memcpy_s(&(cards.at(index)), sizeof card, cardtmp, sizeof card);
 		
 	}
 }
