@@ -4,6 +4,7 @@
 
 card_stack::card_stack()
 {
+	cards = stack<card>();
 }
 
 

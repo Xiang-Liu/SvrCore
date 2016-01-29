@@ -53,7 +53,7 @@ int card_factory::generate_cards(void)
     return 0;
 }
 
-unsigned long get_cpu_cycle(void)
+/*unsigned long get_cpu_cycle(void)
 {	
     unsigned long high32 = 0, low32 = 0;
 #ifdef WIN32 // WIN32
@@ -71,6 +71,7 @@ unsigned long get_cpu_cycle(void)
     //return counter;
     return high32;
 }
+*/
 
 int card_factory::resort_cards(void)
 {
@@ -97,6 +98,21 @@ int card_factory::resort_cards(void)
 		}
     }
     return RETURN_OK;
+}
+
+card* card_factory::get_one_card(void)
+{
+	if (true == cards.empty())
+	{
+		return NULL;
+	}
+	else
+	{
+		card* rear_card = &(cards[cards.size()-1]);
+		cards.pop_back();
+		return rear_card;
+	}
+	
 }
 
 vector<card> card_factory::cards = vector<card>();

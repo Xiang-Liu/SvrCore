@@ -13,6 +13,6 @@ public:
 	static card* get_instance(CARD_COLOUR colour, CARD_NUMBER number);
 	static int generate_cards(void);
 	static int resort_cards(void);
-	static int move_to_stack(void);
+	static card* get_one_card(void);
 };
 
