@@ -4,6 +4,7 @@
 int main()
 {
 	card_factory::generate_cards();
+	card_factory::resort_cards();
 	system("pause");
 	return 0;
 }

@@ -23,3 +23,6 @@ typedef enum _CARD_NUMBER
 	NUMBER_A,
 	NUMBER_2,
 }CARD_NUMBER;
+
+#define RETURN_ERROR ((int)-1)
+#define RETURN_OK ((int)0)
